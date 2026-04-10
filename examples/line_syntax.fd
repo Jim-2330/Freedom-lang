@@ -1,0 +1,10 @@
+#!frontend line
+; 行式语法示例：每一行都是一次调用：name arg1 arg2 ...
+
+set-exec-mode "interp"
+set-ir-target 0
+
+print "Hello from line syntax"
+poke 1 123 "ram"
+print "peek ram[1] =" (peek 1 "ram")
+

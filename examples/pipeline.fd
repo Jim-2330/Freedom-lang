@@ -1,0 +1,9 @@
+; 用户可选：编译走 IR 虚拟机、IR 层数、JIT（原型缓存）、mixed 回退
+
+(set-exec-mode "compile")
+(set-ir-target 2)
+
+(print "pipeline:" (pipeline-status))
+(print "ir for (+ 1 2):" (compile-to-ir (quote (+ 1 2)) 2))
+
+(print "result:" (+ 1 2))

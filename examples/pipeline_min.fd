@@ -1,0 +1,3 @@
+(set-exec-mode "compile")
+(set-ir-target 2)
+(print "hi")

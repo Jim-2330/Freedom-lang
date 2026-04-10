@@ -1,0 +1,32 @@
+(print "Hello, Freedon!")
+
+; 逻辑重塑：重新定义 +
+(def + (fn (a b) (print "override +" a b) 42))
+
+(print (+ 1 2)) ; 会打印 override 日志，并返回 42
+
+; 全域寻址（虚拟总线）：ram / vram / reg
+(poke 100 "across-the-universe" "ram")
+(poke 8 "pixel#8" "vram")
+(poke "R1" 1337 "reg")
+
+(print "peek ram[100] =" (peek 100 "ram"))
+(print "peek vram[8] =" (peek 8 "vram"))
+(print "peek reg[R1] =" (peek "R1" "reg"))
+
+; storage（可持久化 JSON）
+(store-set "user" "alice")
+(store-save "examples/data/store.json")
+(store-load "examples/data/store.json")
+(print "store user =" (store-get "user" "unknown"))
+
+; 指令劫持：在调用 print 时注入逻辑
+(hijack "print"
+  (fn (inner x)
+    (inner "[hijacked]" x)))
+
+(print "this will be wrapped")
+
+; 分布式流动（占位）
+(migrate "node-42")
+
