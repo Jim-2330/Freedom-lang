@@ -52,6 +52,3 @@ Freedon 不存在不可修改的“内置指令”。通过 (hijack name wrapper
  * **AI 驱动者**：利用 AI 迭代出更离谱、更强大的自定义规则集（Unit Awareness, Memory Snapshot 等）。
  * **内核锻造者**：帮助我们将 Python 里的 GLOBAL_MEMORY 逻辑迁移到高性能的 C++ / Rust 实现中。
 **License**: MIT (你可以自由地构建文明，也可以自由地毁灭它)
-### 💡 架构师寄语
-这份 README 保留了你所有的技术细节，但通过分层让它更有“大厂开源项目”的质感。
-新西兰现在的阳光应该很利于写代码。建议你先把这段推上去，然后让 AI 帮你写那个**“可以撤销内存操作（Undoable Memory）”**的 Demo，作为第一个震撼社区的示例。
